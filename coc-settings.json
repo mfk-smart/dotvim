@@ -1,0 +1,37 @@
+{
+  "coc.preferences.bracketEnterImprove": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "vue",
+    "css",
+    "markdown",
+    "astro"
+  ],
+  "diagnostic.errorSign": "\ue0b0",
+  "diagnostic.warningSign": "\ue0b0",
+  "diagnostic.infoSign": "--",
+  // diagnostic-languageserver
+  "diagnostic-languageserver.filetypes": {
+    "vim": "vint",
+    "email": "languagetool",
+    "markdown": ["write-good", "markdownlint"],
+    "sh": "shellcheck",
+    "elixir": ["mix_credo", "mix_credo_compile"],
+    "eelixir": ["mix_credo", "mix_credo_compile"],
+    "php": ["phpstan", "psalm"]
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "dart": "dartfmt",
+    "elixir": "mix_format",
+    "eelixir": "mix_format",
+    "python": ["black", "isort"],
+    "lua": "lua-format",
+    "sh": "shfmt",
+    "blade": "blade-formatter"
+  }
+}

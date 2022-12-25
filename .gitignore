@@ -1,0 +1,9 @@
+plugged/
+.netrwhist
+.swp/*
+.undo/*
+.backup/*
+!*/.gitkeep
+tags
+pack/*
+
