@@ -162,8 +162,8 @@ nnoremap <leader>, :noh<cr>
 " colorscheme solarized
 " let g:solarized_menu=0
 " let g:solarized_contrast="high"
-set background=dark
-autocmd vimenter * ++nested colorscheme solarized8
+set background=light
+autocmd vimenter * ++nested colorscheme solarized8_flat
 
 
 "The order matters. This line should come later than vim-colors-solarized settings.
@@ -253,6 +253,11 @@ nnoremap <silent> <leader>o :Vista!!<CR>
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
+let g:copilot_filetypes = {
+      \ 'markdown': v:false,
+      \ 'astro': v:true,
+      \ }
+
 "----- PLUGIN: vim-go
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
@@ -274,3 +279,12 @@ command! PackStatus call PackInit() | call minpac#status()
 nnoremap gp :silent %!prettier --stdin-filepath %<CR>
 
 au BufReadPost *.astro set syntax=astro
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
+  \   <bang>0)
+
+nnoremap <C-g> :Rg<Cr>

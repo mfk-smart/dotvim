@@ -9,10 +9,29 @@ New vim configuration with:
     - tmux navigation
     - lightline
 
-## Plugin Manager: minpac
+## 1. Install plugin Manager: minpac
 
 ```
 git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
+```
+
+## 2. Install colors: Solarized8
+
+```
+git clone https://github.com/lifepillar/vim-solarized8.git \
+    ~/.vim/pack/themes/opt/solarized8
+```
+
+## 3. Install Plugins
+
+```
+:PackUpdate
+```
+
+## 3. Install Coc Extensions
+
+```
+:CocUpdate
 ```
 
 ## Licence
