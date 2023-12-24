@@ -24,14 +24,14 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('preservim/vim-markdown')
 call minpac#add('github/copilot.vim')
 call minpac#add('lifepillar/vim-solarized8', {'type': 'opt'})
-call minpac#add('vim-airline/vim-airline')
-call minpac#add('vim-airline/vim-airline-themes')
+call minpac#add('itchyny/lightline.vim')
+call minpac#add('mengelbrecht/lightline-bufferline')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('prettier/vim-prettier')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('wuelnerdotexe/vim-astro')
-call minpac#add('christoomey/vim-tmux-navigator')
+call minpac#add('preservim/vim-indent-guides')
 
 set number
 set shell=/bin/bash
@@ -105,7 +105,7 @@ colorscheme solarized8
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-source $HOME/.vim/rcs/airline.vim
+source $HOME/.vim/rcs/lightline.vim
 
 " Move Around
 nnoremap <up> <nop>
@@ -149,6 +149,9 @@ noremap <silent> <Leader>cc :TComment<CR>
 let g:gitgutter_map_keys = 0
 nmap ghp <Plug>(GitGutterPreviewHunk)
 autocmd BufWritePost * GitGutter
+
+" Indent Guides
+let g:indent_guides_guide_size = 1
 
 " CoC
 " always show signcolumns
