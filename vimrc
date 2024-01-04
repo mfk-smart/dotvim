@@ -160,3 +160,4 @@ set signcolumn=yes
 " coc-css
 autocmd FileType scss setl iskeyword+=@-@
 
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
