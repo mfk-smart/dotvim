@@ -32,6 +32,7 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('wuelnerdotexe/vim-astro')
 call minpac#add('preservim/vim-indent-guides')
+call minpac#add('jxnblk/vim-mdx-js')
 
 set number
 set shell=/bin/bash
